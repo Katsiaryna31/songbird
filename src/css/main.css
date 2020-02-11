@@ -1,0 +1,58 @@
+body {
+    background: grey;
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.score_number {
+    
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 0 10px;
+    width: 40px;
+}
+
+.level_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #008966;
+    border-radius: 15px;
+}
+
+.level_name {
+    list-style: none;
+    background-color: #008966;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.task_wrapper {
+    background: #303030;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.image_wrapper {
+    padding: 0 20px 0 0;
+}
+
+.audio_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+

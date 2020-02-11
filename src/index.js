@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/main.scss';
+import './css/main.css';
 
-import Header from './components/header';
-import Menu from './components/menu';
-import Task from './components/task';
-import Answer from './components/answer';
-import ChangeLevel from './components/changeLevel';
+import Header from './app/header';
+import Menu from './app/menu';
+import Task from './app/task';
+import Answer from './app/answer';
+import ChangeLevel from './app/changeLevel';
 
 const App = () => (
     <div>

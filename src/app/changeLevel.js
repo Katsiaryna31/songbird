@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChangeLevel = () => (
         <div>
-            <button>Next level</button>
+            <button className="button_next">Next level</button>
         </div>
 );
 

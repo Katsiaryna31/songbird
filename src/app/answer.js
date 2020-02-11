@@ -1,31 +1,30 @@
 import React from 'react';
 
+const options = ['Ворон', 'Журавль', 'Ласточка', 'Козодой', 'Кукушка', 'Синица'];
+const optionsList = options.map((option, index) =>
+    <li className= "options_item" key={index}>
+        <input type="radio" id={'radio' + index}></input>
+        <label htmlFor={'radio' + index}>{option}</label>
+    </li>
+);
+
 const Options = () => (
-    <ul>
-        <li>
-            <input type="radio" id="radioRaven"></input><label htmlFor="radioRaven">Ворон</label>
-        </li>
-        <li>
-            <input type="radio" id="radioCrane"></input><label htmlFor="radioCrane">Журавль</label>
-        </li>
-        <li>
-            <input type="radio" id="radioSwallow"></input><label htmlFor="radioSwallow">Ласточка</label>
-        </li>
-        <li>
-            <input type="radio" id="radioNightjar"></input><label htmlFor="radioNightjar">Козодой</label>
-        </li>
-        <li>
-            <input type="radio" id="radioCuckoo"></input><label htmlFor="radioCuckoo">Кукушка</label>
-        </li>
-        <li>
-            <input type="radio" id="radioTitmouse"></input><label htmlFor="radioTitmouse">Синица</label>
-        </li>
+    <ul className="options_list">
+        {optionsList}
     </ul>
 );
 
+const Description = () => (
+    <div className="description_wrapper">
+        <p>Послушайте плеер.</p>
+        <p>Выберите птицу из списка.</p>
+    </div>
+)
+
 const Answer = () => (
-    <div>
-        <Options/>
+    <div className="answer_wrapper">
+        <Options />
+        <Description />
     </div>
 );
 

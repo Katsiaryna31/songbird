@@ -1,16 +1,32 @@
 import React from 'react';
+import birdsData from './birdsData';
 
-const options = ['Ворон', 'Журавль', 'Ласточка', 'Козодой', 'Кукушка', 'Синица'];
-const optionsList = options.map((option, index) =>
-    <li className= "options_item" key={index}>
-        <input type="radio" id={'radio' + index}></input>
-        <label htmlFor={'radio' + index}>{option}</label>
+
+const checkAnswer = (e) => {
+    const clickedBird = e.target.innerHTML;
+    const rightAnswer = localStorage.getItem('answerName');
+    if (clickedBird === rightAnswer) {
+        console.log('Win!!!');
+    }
+}
+
+const createOptionsList = () => {
+    const level = localStorage.getItem('level');
+    console.log(level);
+    const levelData = birdsData[level];
+    const optionsList = levelData.map((levelItem, index) =>
+    <li className="options_item" key={index}>
+        <input type="radio" id={'radio' + index} name='answer'></input>
+        <label className="options_label" htmlFor={'radio' + index} onClick={(e) => checkAnswer(e)}>{levelItem.name}</label>
     </li>
 );
+    return optionsList;
+}
+
 
 const Options = () => (
     <ul className="options_list">
-        {optionsList}
+        {createOptionsList()}
     </ul>
 );
 
@@ -20,6 +36,7 @@ const Description = () => (
         <p>Выберите птицу из списка.</p>
     </div>
 )
+
 
 const Answer = () => (
     <div className="answer_wrapper">

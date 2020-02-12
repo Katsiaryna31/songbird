@@ -37,6 +37,10 @@ body {
     border-radius: 15px;
 }
 
+.level_name--active {
+    background-color: #00bc8c;
+}
+
 .task_wrapper {
     background: #303030;
     display: flex;
@@ -78,10 +82,21 @@ body {
     list-style: none;
     margin: 0;
     padding: 8px;
+    display: flex;
+}
+
+.options_item:hover {
+    background: darkgrey;
+    border-radius: 15px;
 }
 
 .options_item:not(:last-child) {
     border-bottom: 1px solid darkgrey;
+}
+
+.options_label {
+    display: inline-block;
+    width: 100%;
 }
 
 .description_wrapper {
@@ -94,13 +109,17 @@ body {
 }
 
 .button_next {
-    background-color: #008966;
+    background-color: darkgrey;
     width: 100%;
     border: none;
     color: #ffffff;
     font-size: 20px;
     padding: 15px;
     border-radius: 15px;
+}
+
+.button_next--active {
+    background-color: #008966;
 }
 
 @media screen and (max-width: 481px) {

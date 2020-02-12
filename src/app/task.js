@@ -3,10 +3,25 @@ import blackBird from '../img/black_bird.jpg';
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
- 
+import birdsData from './birdsData';
+
+const getRandomNumber = (max, min) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const getRandomAudio = () => {
+    const level = localStorage.getItem('level');
+    const levelData = birdsData[level];
+    const randomData = getRandomNumber(levelData.length - 1, 0);
+    if (!localStorage.getItem('answerName')) {
+        localStorage.setItem('answerName', levelData[randomData].name);
+    }
+    return levelData[randomData].audio;
+}
+  
 const Player = () => (
   <AudioPlayer
-    src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3"
+    src = {getRandomAudio()}
   />
 );
 

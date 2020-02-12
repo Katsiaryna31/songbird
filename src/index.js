@@ -18,3 +18,10 @@ const App = () => (
     </div>);
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+window.onbeforeunload = function() {
+    localStorage.clear();
+ }
+
+const zeroLevel = document.getElementById('0');
+zeroLevel.classList.add('level_name--active');

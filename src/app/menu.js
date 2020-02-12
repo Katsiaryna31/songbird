@@ -2,7 +2,7 @@ import React from 'react';
 
 const levels = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
 const levelsList = levels.map((level, index) =>
-  <li className="level_name" key={index}>{level}</li>
+  <li className='level_name' id={index} key={index}>{level}</li>
 );
 
 const Menu = () => (

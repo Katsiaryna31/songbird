@@ -7,7 +7,6 @@ const checkAnswer = (index, activeBird, taskBird, setClickedBird, setRightAnswer
     setClickedBird(activeBird);
     if (activeBird === taskBird.name) {
         clickedItem.classList.add('options_item--right');
-        console.log(activeBird);
         setRightAnswer(true);
     } else {
         clickedItem.classList.add('options_item--wrong');

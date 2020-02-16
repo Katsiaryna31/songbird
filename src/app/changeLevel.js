@@ -1,4 +1,11 @@
 import React from 'react';
+import birdsData from './birdsData';
+
+const getRandomNumber = (max, min) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 
 const DisableButton = ({setLevel}) => (
     <div>
@@ -14,7 +21,9 @@ const DisableButton = ({setLevel}) => (
 const AbleButton = ({setLevel, setTaskBird, setRightAnswer, setClickedBird}) => (
     <div>
         <button className="button_next button_next--active" onClick = {()=> setLevel((level)=> {
-            setTaskBird(null);
+            const levelData = birdsData[level + 1];
+            const randomData = getRandomNumber(levelData.length - 1, 0);
+            setTaskBird(levelData[randomData]);
             setRightAnswer(false);
             setClickedBird(null);
             const optionsList = document.querySelectorAll('.options_input');

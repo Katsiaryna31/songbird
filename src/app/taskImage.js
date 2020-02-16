@@ -9,7 +9,6 @@ const DefaultImage = () => (
 );
 
 const TaskBirdImage = ({ level, taskBird }) => {
-    console.log(level, taskBird);
     const levelData = birdsData[level];
     let image;
     levelData.forEach(bird => {

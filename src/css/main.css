@@ -90,6 +90,35 @@ body {
     border-radius: 15px;
 }
 
+.options_item--right,
+.options_item--wrong {
+    position: relative;
+}
+
+.options_item--right::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: green;
+    z-index: 1;
+}
+
+.options_item--wrong::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    z-index: 1;
+}
+
 .options_item:not(:last-child) {
     border-bottom: 1px solid darkgrey;
 }
@@ -106,6 +135,37 @@ body {
     flex-grow: 1;
     border: 1px solid darkgrey;
     margin-bottom: 20px;
+    max-width: 780px;
+}
+
+.description_main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.description_main img {
+    padding-right: 15px;
+}
+
+.description_bird {
+    flex-grow: 1;
+}
+
+.description_bird h3,
+.description_bird p {
+    margin: 0;
+    padding: 0;
+}
+
+.description_bird p {
+    font-size: 16px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.description_text {
+    font-size: 16px;
 }
 
 .button_next {

@@ -19,8 +19,8 @@ body {
     background: transparent;
     border: none;
     font-size: 25px;
-    padding: 0 10px;
-    width: 40px;
+    padding: 0 5px;
+    width: 50px;
 }
 
 .score_number::placeholder {
@@ -185,6 +185,28 @@ body {
 
 .button_next--active {
     background-color: #008966;
+}
+
+.win_wrapper {
+    background: black;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.win_header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.win_text {
+    text-align: center;
+    font-size: 35px; 
+}
+
+.giphy-embed {
+    display: block;
+    margin: 0 auto;
+    width: auto;
 }
 
 @media screen and (max-width: 481px) {

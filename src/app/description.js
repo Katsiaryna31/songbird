@@ -22,7 +22,7 @@ const Description = ({ level, clickedBird }) => {
                             <h3>{clickedBird}</h3>
                             <p>{bird.species}</p>
                             <AudioPlayer
-                                src={bird.audio}
+                                src={bird.audio} autoPlay={false}
                             />
                         </div>
                     </div>

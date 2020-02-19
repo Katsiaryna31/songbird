@@ -15,6 +15,7 @@ const getRandomNumber = (max, min) => {
 
 const App = () => {
     let [level, setLevel] = useState(0);
+    let [score, setScore] = useState(5);
     const levelData = birdsData[level];
     const randomData = getRandomNumber(levelData.length - 1, 0);
     let [taskBird, setTaskBird] = useState(levelData[randomData]);
@@ -24,8 +25,8 @@ const App = () => {
         <Header />
         <Menu level={level}/>
         <Task level={level} taskBird={taskBird} setTaskBird={setTaskBird} isRightAnswer={isRightAnswer} />
-        <Answer level={level} taskBird={taskBird} setRightAnswer={setRightAnswer} clickedBird={clickedBird} setClickedBird={setClickedBird}/>
-        <ChangeLevel setLevel={setLevel} isRightAnswer={isRightAnswer} setRightAnswer={setRightAnswer} setTaskBird={setTaskBird} setClickedBird={setClickedBird}/>
+        <Answer level={level} taskBird={taskBird} setRightAnswer={setRightAnswer} clickedBird={clickedBird} setClickedBird={setClickedBird} setScore={setScore}/>
+        <ChangeLevel setLevel={setLevel} isRightAnswer={isRightAnswer} setRightAnswer={setRightAnswer} setTaskBird={setTaskBird} setClickedBird={setClickedBird} score={score} setScore={setScore}/>
     </div>)
 };
 

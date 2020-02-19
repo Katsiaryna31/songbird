@@ -18,7 +18,7 @@ const DisableButton = ({setLevel}) => (
     </div>
 )
 
-const AbleButton = ({setLevel, setTaskBird, setRightAnswer, setClickedBird}) => (
+const AbleButton = ({setLevel, setTaskBird, setRightAnswer, setClickedBird, score, setScore}) => (
     <div>
         <button className="button_next button_next--active" onClick = {()=> setLevel((level)=> {
             const levelData = birdsData[level + 1];
@@ -32,14 +32,19 @@ const AbleButton = ({setLevel, setTaskBird, setRightAnswer, setClickedBird}) => 
                 option.classList.remove('options_item--wrong');
                 option.checked = false;
             })
+            const scoreShow = document.querySelector('.score_number');
+            console.log(scoreShow.placeholder);
+            console.log(score);
+            scoreShow.placeholder = score;
+            setScore(score => score + 5);
             return (level += 1)})}>Next level</button>
     </div>
 )
 
-const ChangeLevel = ({setLevel, isRightAnswer, setRightAnswer, setTaskBird, setClickedBird}) => (
+const ChangeLevel = ({setLevel, isRightAnswer, setRightAnswer, setTaskBird, setClickedBird, score, setScore}) => (
     <div>
         {!isRightAnswer && <DisableButton setLevel={setLevel} />}
-        {isRightAnswer && <AbleButton setLevel={setLevel} setTaskBird={setTaskBird} setRightAnswer={setRightAnswer} setClickedBird={setClickedBird}/>}
+        {isRightAnswer && <AbleButton setLevel={setLevel} setTaskBird={setTaskBird} setRightAnswer={setRightAnswer} setClickedBird={setClickedBird} score={score} setScore={setScore}/>}
     </div>  
 ) 
 

@@ -6,7 +6,7 @@ const Header = () => (
         <img src={logo} alt="logo" width='125' height='52'></img>
         <div>
             <label className="score_label" htmlFor="score">Score:</label>
-            <input className="score_number" type="text" id="score" value="0" readOnly/>
+            <input className="score_number" type="number" id="score" placeholder="0"/>
         </div>
     </header>
 );

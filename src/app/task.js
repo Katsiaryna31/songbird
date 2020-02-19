@@ -12,7 +12,7 @@ const Audio = ({ isRightAnswer, taskBird }) => {
         {!isRightAnswer && <HiddenName />}
         {isRightAnswer && <OpenName taskBird = { taskBird }/>}
         <AudioPlayer
-            src={taskBird.audio}
+            src={taskBird.audio} autoPlay={false}
         />
     </div>)
 };

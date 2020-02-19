@@ -10,6 +10,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    color: #ffffff;
 }
 
 
@@ -20,6 +21,10 @@ body {
     font-size: 25px;
     padding: 0 10px;
     width: 40px;
+}
+
+.score_number::placeholder {
+    color: #ffffff;
 }
 
 .level_list {
